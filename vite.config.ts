@@ -16,9 +16,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'lib/main.ts'),
-      name: 'React Reactive LocalStorage',
+      name: 'React Reactive Storage',
       // the proper extensions will be added
-      fileName: 'reactive-localstorage',
+      fileName: 'react-reactive-storage',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

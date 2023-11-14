@@ -5,12 +5,12 @@
   "private": false,
   "type": "module",
   "keywords": ["localstorage", "react", "reactive", "storage", "react-hooks"],
-  "main": "./dist/reactive-localstorage.umd.cjs",
-  "module": "./dist/reactive-localstorage.js",
+  "main": "./dist/react-reactive-storage.umd.cjs",
+  "module": "./dist/react-reactive-storage.js",
   "exports": {
     ".": {
-      "import": "./dist/reactive-localstorage.js",
-      "require": "./dist/reactive-localstorage.umd.cjs"
+      "import": "./dist/react-reactive-storage.js",
+      "require": "./dist/react-reactive-storage.umd.cjs"
     }
   },
   "files": [
