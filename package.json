@@ -1,12 +1,13 @@
 {
   "name": "react-reactive-storage",
   "author": "kamranasad7",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "type": "module",
   "keywords": ["localstorage", "react", "reactive", "storage", "react-hooks"],
   "main": "./dist/react-reactive-storage.umd.cjs",
   "module": "./dist/react-reactive-storage.js",
+  "types": "./dist/react-reactive-storage.d.ts",
   "exports": {
     ".": {
       "import": "./dist/react-reactive-storage.js",
