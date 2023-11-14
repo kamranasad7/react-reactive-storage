@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": false,
   "type": "module",
-  "keywords": ["localstorage", "react", "reactive", "storage"],
+  "keywords": ["localstorage", "react", "reactive", "storage", "react-hooks"],
   "main": "./dist/reactive-localstorage.umd.cjs",
   "module": "./dist/reactive-localstorage.js",
   "exports": {
