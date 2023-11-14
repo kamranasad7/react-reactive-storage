@@ -15,7 +15,7 @@ It provides an easy-to-use `useLsState` hook which is very similar to `useState`
 ### Usage
 The usage is similar to `useState` from React with an  
 ```
-   import { useLsState } from "reactive-localstorage";
+   import { useLsState } from "react-reactive-storage";
 
    const [user, setUser] = useLsState<{name: string, age: number}>('user', {name: 'asad', age: 2});
 ```
