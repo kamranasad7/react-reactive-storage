@@ -1,10 +1,21 @@
 {
   "name": "react-reactive-storage",
   "author": "kamranasad7",
-  "version": "1.0.3",
+  "description": "An encrypted and reactive localstorage system for react using hooks like useState",
+  "version": "1.0.4",
   "private": false,
+  "keywords": [
+    "localstorage",
+    "react",
+    "reactive",
+    "storage",
+    "react-hooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamranasad7/reactive-localstorage"
+  },
   "type": "module",
-  "keywords": ["localstorage", "react", "reactive", "storage", "react-hooks"],
   "main": "./dist/react-reactive-storage.umd.cjs",
   "module": "./dist/react-reactive-storage.js",
   "types": "./dist/react-reactive-storage.d.ts",
@@ -24,9 +35,6 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "secure-ls": "^1.2.6"
-  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -44,5 +52,6 @@
     "typescript": "^5.4.3",
     "vite": "^5.2.6",
     "vite-plugin-dts": "^3.7.3",
+    "vite-plugin-top-level-await": "^1.4.1"
   }
 }
