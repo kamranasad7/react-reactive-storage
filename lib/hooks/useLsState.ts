@@ -6,14 +6,14 @@ const get = async <T>(key: string): Promise<T | null> => {
   if (value === null) { return value; }
 
   if (ReactiveStorage.isEncrypted()) {
-    return JSON.parse(await encryption.decrypt(value)) as T;
+    return JSON.parse(await (await encryption).decrypt(value)) as T;
   }
   else return JSON.parse(value) as T;
 }
 
 const set = async <T>(key: string, value: T | null): Promise<void> => {
   if (ReactiveStorage.isEncrypted()) {
-    localStorage.setItem(key, await encryption.encrypt(JSON.stringify(value)))
+    localStorage.setItem(key, await (await encryption).encrypt(JSON.stringify(value)))
   }
   else localStorage.setItem(key, JSON.stringify(value));
 }
@@ -28,7 +28,7 @@ const useLsState = <T>(key: string, defaultValue?: T): [T | null, (value: T) => 
   }
 
   const onStorageChange = async (e: StorageEvent) => {
-    if(e.key == key) { _setState(await get(key)); }
+    if (e.key == key) { _setState(await get(key)); }
   }
 
   useEffect(() => {
@@ -38,10 +38,10 @@ const useLsState = <T>(key: string, defaultValue?: T): [T | null, (value: T) => 
     };
 
     getInitialValue();
-    
+
     window.addEventListener('storage', onStorageChange);
     return () => window.removeEventListener('storage', onStorageChange);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return [state, setState];

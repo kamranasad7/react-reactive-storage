@@ -77,5 +77,5 @@ class Crypto {
   }
 }
 
-const encryption = await Crypto.createInstance();
+const encryption = Crypto.createInstance();
 export { encryption };
