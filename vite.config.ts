@@ -4,7 +4,6 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import topLevelAwait from "vite-plugin-top-level-await";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,7 +11,6 @@ const __dirname = dirname(__filename);
 export default defineConfig({
   plugins: [
     dts({ include: "lib", insertTypesEntry: true, }),
-    topLevelAwait({}),
   ],
   build: {
     copyPublicDir: false,
